@@ -21,7 +21,6 @@ import org.springframework.context.annotation.Profile;
 //@EnableDiscoveryClient 
 
 @SpringBootApplication
- @Profile("mover")
    
 public class Application {
 
