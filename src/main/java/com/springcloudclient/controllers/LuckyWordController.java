@@ -7,6 +7,7 @@ package com.springcloudclient.controllers;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,11 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LuckyWordController {
 
-//    @Value("${lucky-word}")
-   // String luckyWord;
-
-    @GetMapping("/lucky-word{lucky-word}")
-    public String showLuckyWord(String luckyWord ) {
+   // @Value("${lucky-word}")
+   // String luckyWord; 
+    @GetMapping("/lucky-word")
+    public String showLuckyWord(@RequestParam  String luckyWord ) {
         return "The lucky word is: " + luckyWord;
     }
 }
