@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @author muyin
  */
 @RestController
-public class LuckyWorldController {
+public class LuckyWordController {
 
-    @Value("${lucky-word}")
-    String luckyWord;
+//    @Value("${lucky-word}")
+   // String luckyWord;
 
-    @GetMapping("/lucky-word")
-    public String showLuckyWord() {
+    @GetMapping("/lucky-word{lucky-word}")
+    public String showLuckyWord(String luckyWord ) {
         return "The lucky word is: " + luckyWord;
     }
 }
